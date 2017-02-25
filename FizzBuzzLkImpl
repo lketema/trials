@@ -1,0 +1,39 @@
+/*check udacity for git and github descriptions*/
+/*implementation of FizzBuzz, if a number is divisble by 3, it will print Fizz. If divisible by 5, prints Buzz, Both Fizz Buzz. 
+Else prints the number that is input. 0 causes exit.*/
+package bookPackage;
+import java.util.Scanner;
+
+public class FizzBuzz {
+	public static void main (String [] args){
+		Scanner s = new Scanner(System.in);
+		System.out.println("enter number to play, 0 to exit: ");
+		int i = s.nextInt();
+		while (i >= 0 ){
+			if (i == 0){
+				System.out.println("thank you for playing. goodbye.");
+				break;
+			}
+			if ((i % 3)== 0  && (i % 5)== 0) {
+				System.out.println("Fizz Buzz");
+				
+			}
+			else if ((i % 3)== 0) {
+				System.out.println("Fizz ");
+				
+			}
+			else if ((i % 5)== 0){
+				System.out.println("Buzz ");
+			}
+			else {
+				System.out.println(i);
+			}
+			
+			
+			i = s.nextInt();
+		
+			
+		}
+		s.close();
+	}
+}
